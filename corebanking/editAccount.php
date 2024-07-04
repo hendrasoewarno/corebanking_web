@@ -40,9 +40,9 @@ EOD;
 <h1>Edit Account</h1>
 <form action= "editAccount.php" method="POST" enctype="application/x-www-form-urlencoded">
 <input type="hidden" name="noac" value="<?php echo $dataAwal['noac']; ?>">
-<label for="upah">Nik:</label>
+<label for="nik">Nik:</label>
 <input type="text" name="nik" value="<?php echo $dataAwal['nik']; ?>" maxlength="30"/ readonly><br>
-<label for="upah">Nama:</label>
+<label for="nama">Nama:</label>
 <input type="text" name="nama" value="<?php echo $dataAwal['nama']; ?>" maxlength="100"/><br>
 <input type="submit" value="Ajukan"/>
 <input type= "reset" value="Reset"/>

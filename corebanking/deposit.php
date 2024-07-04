@@ -8,7 +8,7 @@
 <?php
 include "library.php";
 
-session_start();
+if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 
 if (!isset($_REQUEST["noac"])) {
 ?>
@@ -38,8 +38,8 @@ EOD;
 <h1>Deposit</h1>
 <form action= "deposit.php" method="POST" enctype="application/x-www-form-urlencoded">
 <input type="hidden" name="noac" value="<?php echo $dataAwal['noac']; ?>">
-<label for="upah">Nik:</label><span><?php echo $dataAwal['nik']; ?></span><br>
-<label for="upah">Nama:</label><span><?php echo $dataAwal['nama']; ?></span><br>
+<label for="nik">Nik:</label><span><?php echo $dataAwal['nik']; ?></span><br>
+<label for="nama">Nama:</label><span><?php echo $dataAwal['nama']; ?></span><br>
 <input type="number" name="amount" value="0" maxlength="15"/><br>
 <input type="submit" value="Ajukan"/>
 <input type= "reset" value="Reset"/>
